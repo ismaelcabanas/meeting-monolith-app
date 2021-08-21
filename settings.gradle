@@ -1,18 +1,12 @@
 pluginManagement {
     repositories {
-        maven {
-            def artifactoryUrl = System.env.ARTIFACTORY_CONTEXT ?: artifactory_contextUrl
-            url = uri("$artifactoryUrl/plugins-release")
-            credentials {
-                username = System.env.ARTIFACTORY_USER ?: artifactory_user
-                password = System.env.ARTIFACTORY_PWD ?: artifactory_pwd
-            }
-        }
+      gradlePluginPortal()
     }
 }
-
-plugins {
-    id("com.adevinta.commonplatform.common-settings") version("0.0.5")
+dependencyResolutionManagement {
+  repositories {
+    mavenCentral()
+  }
 }
 
 rootProject.name=projectName

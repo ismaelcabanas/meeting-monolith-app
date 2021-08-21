@@ -13,14 +13,6 @@ buildscript {
       projectreactorVersion = "3.2.12.RELEASE"
       jupiterVersion = "5.7.2"
     }
-
-    repositories {
-        gradlePluginPortal()
-        mavenCentral()
-        maven {
-          url "https://plugins.gradle.org/m2/"
-        }
-    }
 }
 
 plugins {
